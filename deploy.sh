@@ -7,6 +7,6 @@ docker run --rm -it --privileged --network host \
      -v /etc/hosts:/etc/hosts \
      -v /var/lib/docker/containers:/var/lib/docker/containers \
      --pid="host" \
-     -v $(pwd):$(pwd) \
-     -w $(pwd)/${lab} \
+     -v $(pwd)/${lab}:$(pwd) \
+     -w $(pwd) \
      ghcr.io/srl-labs/clab clab deploy
