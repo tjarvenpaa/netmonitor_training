@@ -1,5 +1,5 @@
 #!/bin/bash
-${lab} = $1
+${lab}=$1;
 
 docker run --rm -it --privileged --network host \
      -v /var/run/docker.sock:/var/run/docker.sock \
