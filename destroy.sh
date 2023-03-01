@@ -10,6 +10,6 @@ docker run --rm -it --privileged --network host \
      --pid="host" \
      -v $(pwd):$(pwd) \
      -w $(pwd) \
-     ghcr.io/srl-labs/clab clab deploy
+     ghcr.io/srl-labs/clab clab destroy
 
 cd ..
