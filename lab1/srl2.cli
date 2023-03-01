@@ -16,4 +16,4 @@ set network-instance default protocols ospf instance default area 0.0.0.1 interf
 set network-instance default protocols ospf instance default area 0.0.0.1 interface ethernet-1/2.1 interface-type point-to-point
 set system snmp community testi
 set system snmp network-instance default admin-state enable
-set system snmp network-instance default source-address [ 10.10.10.2 10.10.20.2 ]
+set system snmp network-instance default source-address [ 1.1.1.2 ]
