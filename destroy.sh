@@ -12,4 +12,5 @@ docker run --rm -it --privileged --network host \
      -w $(pwd) \
      ghcr.io/srl-labs/clab clab destroy
 
+rm -rf clab-$1
 cd ..
