@@ -19,6 +19,10 @@ topology:
     snmp:
       kind: linux
       image: elcolio/net-snmp
+      binds:
+      - snmp.sh:/snmp.sh
+      exec: 
+      - /bin/bash /snmp.sh
     
     nagios:
       kind: linux
