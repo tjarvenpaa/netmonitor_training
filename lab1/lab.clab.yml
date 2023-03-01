@@ -31,6 +31,7 @@ topology:
       - 8008:80
       binds:
       - nagios.sh:/nagios.sh
+      - nagios/router.cfg:/opt/nagios/etc/objects/router.cfg
       exec: 
       - /bin/bash /nagios.sh
   
