@@ -5,16 +5,6 @@ topology:
       kind: srl
       image: ghcr.io/nokia/srlinux
       startup-config: srl1.cli
-
-    srl2:
-      kind: srl
-      image: ghcr.io/nokia/srlinux
-      startup-config: srl2.cli
-
-    srl3:
-      kind: srl
-      image: ghcr.io/nokia/srlinux
-      startup-config: srl3.cli
     
     snmp:
       kind: linux
@@ -25,7 +15,4 @@ topology:
       - /bin/bash /snmp.sh
   
   links:
-    - endpoints: ["srl1:e1-1", "srl2:e1-2"]
-    - endpoints: ["srl2:e1-1", "srl3:e1-2"]
-    - endpoints: ["srl3:e1-1", "srl1:e1-2"]
     - endpoints: ["snmp:eth1", "srl1:e1-5"]

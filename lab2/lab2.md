@@ -24,7 +24,7 @@ Observium username and password is `lab2 / lab2` and can be accessed by web brow
 
 ## Task
 
-Observium is showing an alarm. Investigate the alarm with observium and fix the device configuration if necessary. Use Nokia SR Linux documentation to help with the commands.
+Observium is showing three alarms that are connected to the same fault. Investigate the alarm with observium and fix the device configuration as needed. Use Nokia SR Linux documentation to help with the commands.
 
 ## Cleanup
 After the lab is done remember to destroy the lab with command `./destroy.sh lab2`
