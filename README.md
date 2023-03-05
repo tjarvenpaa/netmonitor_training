@@ -13,28 +13,17 @@ Now you´re ready to start the first lab!
 
 ## Usage
 
-Deploy lab with command
-```
-./deploy.sh <lab>
-```
-Destroy lab with command
-```
-./destroy.sh <lab>
-```
+Deploy lab with command `./deploy.sh <lab>`
 
-Access server console with command
-```
-./server.sh <lab> <server>
-```
-for example
-```
-./server.sh lab1 snmp
-```
+Destroy lab with command `./destroy.sh <lab>`
 
-Access router CLI with command
-```
-./router.sh <lab> <router_number>
-```
+Access server console with command `./server.sh <lab> <server>`
+
+for example `./server.sh lab1 snmp`
+
+You can also access routers CLI with command `./router.sh <lab> <router_number>`
+
+for example `./router.sh lab2 1`
 
 ## Labs
 
@@ -45,7 +34,3 @@ SNMP tools
 [Lab 2](lab2/lab2.md)
 
 Observium Network monitor
-
-[Lab 3](lab3/lab3.md)
-
-FRR software routers

@@ -24,8 +24,6 @@ The usable OIDs and instructions for configurating Nokia SR Linux can be found f
 
 You can enter the server console with command `./server.sh lab1 snmp` and the router CLI with command `./srl.sh lab1 1`
 
-After the lab is done remember to destroy the lab with command `./destroy.sh lab1`
-
 ## Task
 
 Login to SNMP server console and use SNMPWalk to query the router from the loopback address above.
