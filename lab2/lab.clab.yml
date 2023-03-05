@@ -28,7 +28,7 @@ topology:
       kind: linux
       image: uberchuckie/observium
       ports:
-      - 8102:80
+      - 8102:8668
       binds:
       - observium.sh:/observium.sh
       exec:
