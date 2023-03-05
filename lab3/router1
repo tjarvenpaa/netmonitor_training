@@ -15,6 +15,7 @@ staticd=no
 pbrd=no
 bfdd=no
 fabricd=no
+snmpd=yes
 
 #
 # If this option is set the /etc/init.d/frr script automatically loads
