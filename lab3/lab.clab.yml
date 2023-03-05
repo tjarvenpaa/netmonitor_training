@@ -5,7 +5,8 @@ topology:
       kind: linux
       image: frrouting/frr-debian
       binds:
-        - router1:/etc/frr/daemons
+        - frr/daemons:/etc/frr/daemons
+        - frr/frr.conf:/etc/snmp/frr.conf
         - router.sh:/router.sh
       exec:
         - /bin/bash /router.sh
@@ -14,7 +15,8 @@ topology:
       kind: linux
       image: frrouting/frr-debian
       binds:
-        - router2:/etc/frr/daemons
+        - frr/daemons:/etc/frr/daemons
+        - frr/frr.conf:/etc/snmp/frr.conf
         - router.sh:/router.sh
       exec:
         - /bin/bash /router.sh
@@ -23,7 +25,8 @@ topology:
       kind: linux
       image: frrouting/frr-debian
       binds:
-        - router3:/etc/frr/daemons
+        - frr/daemons:/etc/frr/daemons
+        - frr/frr.conf:/etc/snmp/frr.conf
         - router.sh:/router.sh
       exec:
         - /bin/bash /router.sh
