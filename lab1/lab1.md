@@ -22,7 +22,9 @@ After the lab is done remember to destroy the lab with command `./destroy.sh lab
 
 Login to SNMP server console and use SNMPWalk to query the router from the loopback address above.
 
-Query the interface status for ethernet-1/5 which is connected to the SNMP server.
+Query the interface status and the description for ethernet-1/5 which is connected to the SNMP server.
+
+Hint: you can first query for the ifIndex for all interfaces. Then you can query for ifOperStatus.<index> for the exact port.
 
 ## Cleanup
 After the lab is done remember to destroy the lab with command `./destroy.sh lab2`

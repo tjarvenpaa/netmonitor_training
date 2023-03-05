@@ -1,0 +1,30 @@
+name: lab2
+topology:
+  nodes:
+    router1:
+      kind: vr-ros
+      startup-config: router1.txt
+
+    router2:
+      kind: vr-ros
+      startup-config: router2.txt
+
+    router3:
+      kind: vr-ros
+      startup-config: router3.txt
+    
+    observium:
+      kind: linux
+      image: uberchuckie/observium
+      ports:
+      - 8102:8668
+      binds:
+      - observium.sh:/observium.sh
+      exec:
+      - /bin/bash /observium.sh
+  
+  links:
+    - endpoints: ["router1:eth1", "router2:eth2"]
+    - endpoints: ["router2:eth1", "router3:eth2"]
+    - endpoints: ["router3:eth1", "router1:eth2"]
+    - endpoints: ["observium:eth1", "router1:eth3"]
