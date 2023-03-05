@@ -45,6 +45,10 @@ topology:
         OBSERVIUM_DB_NAME: observium
         OBSERVIUM_DB_USER: observium 
         OBSERVIUM_DB_PASS: L4b_2
+      binds:
+      - observium.sh:/observium.sh
+      exec:
+      - /bin/bash /observium.sh
   
   links:
     - endpoints: ["srl1:e1-1", "srl2:e1-2"]

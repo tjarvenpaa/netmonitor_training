@@ -39,3 +39,9 @@ Access router CLI with command
 ## Labs
 
 [Lab 1](lab1/lab1.md)
+
+SNMP tools
+
+[Lab 2](lab2/lab2.md)
+
+NagiOS Network monitor
