@@ -5,16 +5,22 @@ topology:
       kind: vr-ros
       image: evilfreelancer/docker-routeros
       startup-config: router1.txt
+      exec:
+      - ros
 
     router2:
       kind: vr-ros
       image: evilfreelancer/docker-routeros
       startup-config: router2.txt
+      exec:
+      - ros
 
     router3:
       kind: vr-ros
       image: evilfreelancer/docker-routeros
       startup-config: router3.txt
+      exec:
+      - ros
     
     observium:
       kind: linux
