@@ -34,3 +34,11 @@ SNMP tools
 [Lab 2](lab2/lab2.md)
 
 Observium Network monitor
+
+## References
+
+This lab uses technologies from the following instances
+
+* [ContainerLab](https://containerlab.dev/)
+* [NOKIA](https://www.nokia.com/networks/data-center/service-router-linux-NOS/)
+* [Observium](https://www.observium.org/)

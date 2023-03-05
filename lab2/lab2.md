@@ -34,4 +34,5 @@ Observium is showing three alarms that are connected to the same fault. Investig
 Hint: You can see each ports current status from port event log.
 
 ## Cleanup
+
 After the lab is done remember to destroy the lab with command `./destroy.sh lab2`
