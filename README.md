@@ -45,3 +45,7 @@ SNMP tools
 [Lab 2](lab2/lab2.md)
 
 Observium Network monitor
+
+[Lab 3](lab3/lab3.md)
+
+FRR software routers

@@ -18,7 +18,7 @@ SNMP is version 2c, the community string is `lab2` and authentication needs to b
 
 The usable OIDs and instructions for configurating Nokia SR Linux can be found from Nokia's web page [Nokia Service Router Linux](https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE16819AAAATQZZA01_V1_SR%20Linux%20R21.3%20Configuration%20Basics.pdf)
 
-You can enter the server console with command `./server.sh lab2 observium` and the routers CLI with command `./router.sh lab2 1`
+You can enter the server console with command `./server.sh lab2 observium` and the routers CLI with command `./srl.sh lab2 <router number>`
 
 Observium username and password is `lab2 / lab2` and can be accessed by web browser http://localhost:8102
 

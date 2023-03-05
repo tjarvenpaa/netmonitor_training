@@ -5,7 +5,7 @@ topology:
       kind: linux
       image: frrouting/frr-debian
       binds:
-        - frr/daemons:/etc/frr/daemons
+#        - frr/daemons:/etc/frr/daemons
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
@@ -18,7 +18,7 @@ topology:
       kind: linux
       image: frrouting/frr-debian
       binds:
-        - frr/daemons:/etc/frr/daemons
+#        - frr/daemons:/etc/frr/daemons
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
@@ -31,7 +31,7 @@ topology:
       kind: linux
       image: frrouting/frr-debian
       binds:
-        - frr/daemons:/etc/frr/daemons
+#        - frr/daemons:/etc/frr/daemons
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
