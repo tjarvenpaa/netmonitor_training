@@ -9,7 +9,7 @@ topology:
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
-        - router1.conf:/etc/frr/frr.conf
+        - router1.conf:/etc/frr/router.conf
         - router.sh:/router.sh
 #      exec:
 #        - /bin/bash /router.sh
@@ -22,7 +22,7 @@ topology:
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
-        - router2.conf:/etc/frr/frr.conf
+        - router2.conf:/etc/frr/router.conf
         - router.sh:/router.sh
 #      exec:
 #        - /bin/bash /router.sh
@@ -35,7 +35,7 @@ topology:
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
-        - router3.conf:/etc/frr/frr.conf
+        - router3.conf:/etc/frr/router.conf
         - router.sh:/router.sh
 #      exec:
 #        - /bin/bash /router.sh
