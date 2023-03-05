@@ -3,17 +3,17 @@ topology:
   nodes:
     router1:
       kind: vr-ros
-      image: vr-ros/vr-mikrotik_ros
+      image: evilfreelancer/docker-routeros
       startup-config: router1.txt
 
     router2:
       kind: vr-ros
-      image: vr-ros/vr-mikrotik_ros
+      image: evilfreelancer/docker-routeros
       startup-config: router2.txt
 
     router3:
       kind: vr-ros
-      image: vr-ros/vr-mikrotik_ros
+      image: evilfreelancer/docker-routeros
       startup-config: router3.txt
     
     observium:
