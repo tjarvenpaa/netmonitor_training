@@ -22,7 +22,7 @@ SNMP is version 2c, the community string is `lab1` (snmpwalk -v 2c -c lab1 1.1.1
 
 The usable OIDs and instructions for configurating Nokia SR Linux can be found from Nokia's web page [Nokia Service Router Linux](https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE16819AAAATQZZA01_V1_SR%20Linux%20R21.3%20Configuration%20Basics.pdf)
 
-You can enter the server console with command `./server.sh lab1 snmp` and the router CLI with command `./srl.sh lab1 1`
+You can enter the server console with command `./server.sh lab1 snmp` and the router CLI with command `./router.sh lab1 1`
 
 ## Task
 
