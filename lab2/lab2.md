@@ -19,7 +19,7 @@ The usable OIDs and instructions for configurating Nokia SR Linux can be found f
 
 You can enter the servers console with command `./server.sh lab2 snmp` or `./server.sh lab2 nagios` and the routers CLI with command `./router.sh lab2 1`
 
-NagiOS username and password is default `nagiosadmin / nagios` and can be accessed by web browser http://localhost:8102
+Observium username and password is `admin / lab` and can be accessed by web browser http://localhost:8102
 
 ## Task
 

@@ -24,15 +24,31 @@ topology:
       exec: 
       - /bin/bash /snmp.sh
     
-    prtg:
+    observium_db:
       kind: linux
-      image: lordmilko/prtg:19.4.54
+      image: mariadb:10.6.4
+      env:
+        MYSQL_ROOT_PASSWORD: L4b_2_R00t
+        MYSQL_USER: observium
+        MYSQL_PASSWORD: L4b_2
+        MYSQL_DATABASE: observium
+    
+    observium:
+      kind: linux
+      image: mbixtech/observium:22.5
       ports:
       - 8102:80
+      env:
+        OBSERVIUM_ADMIN_USER: admin
+        OBSERVIUM_ADMIN_PASS: lab2
+        OBSERVIUM_DB_HOST: observium_db
+        OBSERVIUM_DB_NAME: observium
+        OBSERVIUM_DB_USER: observium 
+        OBSERVIUM_DB_PASS: L4b_2
   
   links:
     - endpoints: ["srl1:e1-1", "srl2:e1-2"]
     - endpoints: ["srl2:e1-1", "srl3:e1-2"]
     - endpoints: ["srl3:e1-1", "srl1:e1-2"]
     - endpoints: ["snmp:eth1", "srl1:e1-5"]
-    - endpoints: ["prtg:eth1", "srl1:e1-6"]
+    - endpoints: ["observium:eth1", "srl1:e1-6"]
