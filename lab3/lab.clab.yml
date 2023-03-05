@@ -4,17 +4,20 @@ topology:
     router1:
       kind: linux
       image: frrouting/frr:v7.5.0
-      startup-config: router1.txt
+      binds:
+        - router1:/etc/frr/daemons
 
     router2:
       kind: linux
       image: frrouting/frr:v7.5.0
-      startup-config: router2.txt
+      binds:
+        - router2:/etc/frr/daemons
 
     router3:
       kind: linux
       image: frrouting/frr:v7.5.0
-      startup-config: router3.txt
+      binds:
+        - router3:/etc/frr/daemons
     
     observium:
       kind: linux
