@@ -3,19 +3,19 @@ topology:
   nodes:
     router1:
       kind: linux
-      image: frrouting/frr:v7.5.0
+      image: frrouting/frr-debian
       binds:
         - router1:/etc/frr/daemons
 
     router2:
       kind: linux
-      image: frrouting/frr:v7.5.0
+      image: frrouting/frr-debian
       binds:
         - router2:/etc/frr/daemons
 
     router3:
       kind: linux
-      image: frrouting/frr:v7.5.0
+      image: frrouting/frr-debian
       binds:
         - router3:/etc/frr/daemons
     
