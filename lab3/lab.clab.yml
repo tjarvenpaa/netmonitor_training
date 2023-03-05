@@ -6,18 +6,27 @@ topology:
       image: frrouting/frr-debian
       binds:
         - router1:/etc/frr/daemons
+        - router.sh:/router.sh
+      exec:
+        - /bin/bash /router.sh
 
     router2:
       kind: linux
       image: frrouting/frr-debian
       binds:
         - router2:/etc/frr/daemons
+        - router.sh:/router.sh
+      exec:
+        - /bin/bash /router.sh
 
     router3:
       kind: linux
       image: frrouting/frr-debian
       binds:
         - router3:/etc/frr/daemons
+        - router.sh:/router.sh
+      exec:
+        - /bin/bash /router.sh
     
     observium:
       kind: linux
