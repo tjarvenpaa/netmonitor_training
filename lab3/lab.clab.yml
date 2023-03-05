@@ -3,42 +3,42 @@ topology:
   nodes:
     router1:
       kind: linux
-      image: frrouting/frr-debian
+      image: frrouting/frr:v8.4.0
       binds:
-#        - frr/daemons:/etc/frr/daemons
+        - frr/daemons:/etc/frr/daemons
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
         - router1.conf:/etc/frr/frr.conf
         - router.sh:/router.sh
-      exec:
-        - /bin/bash /router.sh
+#      exec:
+#        - /bin/bash /router.sh
 
     router2:
       kind: linux
-      image: frrouting/frr-debian
+      image: frrouting/frr:v8.4.0
       binds:
-#        - frr/daemons:/etc/frr/daemons
+        - frr/daemons:/etc/frr/daemons
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
         - router2.conf:/etc/frr/frr.conf
         - router.sh:/router.sh
-      exec:
-        - /bin/bash /router.sh
+#      exec:
+#        - /bin/bash /router.sh
 
     router3:
       kind: linux
-      image: frrouting/frr-debian
+      image: frrouting/frr:v8.4.0
       binds:
-#        - frr/daemons:/etc/frr/daemons
+        - frr/daemons:/etc/frr/daemons
         - frr/frr.conf:/etc/snmp/frr.conf
         - frr/zebra.conf:/etc/snmp/zebra.conf
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
         - router3.conf:/etc/frr/frr.conf
         - router.sh:/router.sh
-      exec:
-        - /bin/bash /router.sh
+#      exec:
+#        - /bin/bash /router.sh
     
     observium:
       kind: linux
