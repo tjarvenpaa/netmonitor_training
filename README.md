@@ -44,4 +44,4 @@ SNMP tools
 
 [Lab 2](lab2/lab2.md)
 
-NagiOS Network monitor
+Observium Network monitor
