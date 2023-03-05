@@ -11,8 +11,8 @@ topology:
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
         - router1.conf:/etc/frr/router.conf
         - router.sh:/router.sh
-#      exec:
-#        - /bin/bash /router.sh
+      exec:
+        - /bin/bash /router.sh
 
     router2:
       kind: linux
@@ -24,8 +24,8 @@ topology:
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
         - router2.conf:/etc/frr/router.conf
         - router.sh:/router.sh
-#      exec:
-#        - /bin/bash /router.sh
+      exec:
+        - /bin/bash /router.sh
 
     router3:
       kind: linux
@@ -37,8 +37,8 @@ topology:
         - frr/snmpd.conf:/etc/snmp/snmpd.conf
         - router3.conf:/etc/frr/router.conf
         - router.sh:/router.sh
-#      exec:
-#        - /bin/bash /router.sh
+      exec:
+        - /bin/bash /router.sh
     
     observium:
       kind: linux
