@@ -2,7 +2,7 @@
 
 apk update
 
-apk add frr-snmp
+apk add frr-snmp net-snmp
 
 snmpd -X
 
