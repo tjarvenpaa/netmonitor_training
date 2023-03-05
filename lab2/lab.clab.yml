@@ -1,4 +1,4 @@
-name: lab1
+name: lab2
 topology:
   nodes:
     srl1:
@@ -23,9 +23,16 @@ topology:
       - snmp.sh:/snmp.sh
       exec: 
       - /bin/bash /snmp.sh
+    
+    prtg:
+      kind: linux
+      image: lordmilko/prtg
+      ports:
+      - 8102:80
   
   links:
     - endpoints: ["srl1:e1-1", "srl2:e1-2"]
     - endpoints: ["srl2:e1-1", "srl3:e1-2"]
     - endpoints: ["srl3:e1-1", "srl1:e1-2"]
     - endpoints: ["snmp:eth1", "srl1:e1-5"]
+    - endpoints: ["prtg:eth1", "srl1:e1-6"]
