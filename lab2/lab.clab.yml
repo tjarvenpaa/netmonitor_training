@@ -26,7 +26,7 @@ topology:
     
     prtg:
       kind: linux
-      image: lordmilko/prtg
+      image: lordmilko/prtg:19.4.54
       ports:
       - 8102:80
   
