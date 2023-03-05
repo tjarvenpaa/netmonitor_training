@@ -16,14 +16,6 @@ topology:
       image: ghcr.io/nokia/srlinux
       startup-config: srl3.cli
     
-    snmp:
-      kind: linux
-      image: elcolio/net-snmp
-      binds:
-      - snmp.sh:/snmp.sh
-      exec: 
-      - /bin/bash /snmp.sh
-    
     observium:
       kind: linux
       image: uberchuckie/observium
