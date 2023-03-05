@@ -2,25 +2,19 @@ name: lab3
 topology:
   nodes:
     router1:
-      kind: vr-ros
-      image: evilfreelancer/docker-routeros
+      kind: linux
+      image: frrouting/frr:v7.5.0
       startup-config: router1.txt
-      exec:
-      - ros
 
     router2:
-      kind: vr-ros
-      image: evilfreelancer/docker-routeros
+      kind: linux
+      image: frrouting/frr:v7.5.0
       startup-config: router2.txt
-      exec:
-      - ros
 
     router3:
-      kind: vr-ros
-      image: evilfreelancer/docker-routeros
+      kind: linux
+      image: frrouting/frr:v7.5.0
       startup-config: router3.txt
-      exec:
-      - ros
     
     observium:
       kind: linux
