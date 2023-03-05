@@ -4,8 +4,6 @@ apk update
 
 apk add frr-snmp
 
-snmpd
-
-mv /etc/frr/router.conf /etc/frr/frr.conf
+snmpd -X
 
 /usr/lib/frr/watchfrr.sh restart all
