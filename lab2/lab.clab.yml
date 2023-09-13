@@ -3,22 +3,26 @@ topology:
   nodes:
     srl1:
       kind: srl
-      image: ghcr.io/nokia/srlinux
+      image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl1.cli
 
     srl2:
       kind: srl
-      image: ghcr.io/nokia/srlinux
+      image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl2.cli
 
     srl3:
       kind: srl
-      image: ghcr.io/nokia/srlinux
+      image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl3.cli
     
     observium:
       kind: linux
       image: uberchuckie/observium
+      wait-for:
+        - "srl1"
+        - "srl2"
+        - "srl3"
       ports:
       - 8102:8668
       binds:
