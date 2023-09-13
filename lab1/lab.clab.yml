@@ -3,7 +3,7 @@ topology:
   nodes:
     srl1:
       kind: srl
-      image: ghcr.io/nokia/srlinux
+      image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl1.cli
     
     snmp:
