@@ -13,17 +13,17 @@ Now you´re ready to start the first lab!
 
 ## Usage
 
-Deploy lab with command `./deploy.sh <lab>`
+Deploy lab with command `sudo ./deploy.sh <lab>`
 
-Destroy lab with command `./destroy.sh <lab>`
+Destroy lab with command `sudo ./destroy.sh <lab>`
 
-Access server console with command `./server.sh <lab> <server>`
+Access server console with command `sudo ./server.sh <lab> <server>`
 
-for example `./server.sh lab1 snmp`
+for example `sudo ./server.sh lab1 snmp`
 
-You can also access routers CLI with command `./router.sh <lab> <router_number>`
+You can also access routers CLI with command `sudo ./router.sh <lab> <router_number>`
 
-for example `./router.sh lab2 1`
+for example `sudo ./router.sh lab2 1`
 
 ## Labs
 
