@@ -16,13 +16,13 @@ Server is connected to SRL1 (ethernet-1/5).
 
 ## Deployment
 
-Deploy the lab with command `./deploy.sh lab1`
+Deploy the lab with command `sudo ./deploy.sh lab1`
 
 SNMP is version 2c, the community string is `lab1` (snmpwalk -v 2c -c lab1 1.1.1.1 OID)
 
 The usable OIDs and instructions for configurating Nokia SR Linux can be found from Nokia's web page [Nokia Service Router Linux](https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE16819AAAATQZZA01_V1_SR%20Linux%20R21.3%20Configuration%20Basics.pdf)
-
-You can enter the server console with command `./server.sh lab1 snmp` and the router CLI with command `./router.sh lab1 1`
+Check if router.sh needs to have execution privilegs. (Can be added with `sudo chmod +x router.sh`)
+You can enter the server console with command `sudo ./server.sh lab1 snmp` and the router CLI with command `sudo ./router.sh lab1 1`
 
 ## Task
 
@@ -33,4 +33,4 @@ Query the interface status and the description for ethernet-1/5 which is connect
 Hint: you can first query for the ifIndex for all interfaces. Then you can query for ifOperStatus.<index> for the exact port.
 
 ## Cleanup
-After the lab is done remember to destroy the lab with command `./destroy.sh lab1`
+After the lab is done remember to destroy the lab with command `sudo ./destroy.sh lab1`
