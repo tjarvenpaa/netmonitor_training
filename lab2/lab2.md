@@ -16,16 +16,16 @@ Server is connected to SRL1, and the routers are connected to eachother with dir
 
 ## Deployment
 
-Deploy the lab with command `./deploy.sh lab2`
+Deploy the lab with command `sudo ./deploy.sh lab2`
 
 
 SNMP is version 2c, the community string is `lab2` (snmpwalk -v 2c -c lab2 x.x.x.x OID). The devices are already added to observium.
 
 The usable OIDs and instructions for configurating Nokia SR Linux can be found from Nokia's web page [Nokia Service Router Linux](https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE16819AAAATQZZA01_V1_SR%20Linux%20R21.3%20Configuration%20Basics.pdf)
 
-You can enter the server console with command `./server.sh lab2 observium` and the routers CLI with command `./router.sh lab2 <router number>`
+You can enter the server console with command `sudo ./server.sh lab2 observium` and the routers CLI with command `sudo ./router.sh lab2 <router number>`
 
-Observium username and password is `lab2 / lab2` and can be accessed by web browser http://localhost:8102
+Observium username and password is `lab2 / lab2` and can be accessed by web browser http://localhost:8102, if using virtualmachine outside wsl, replace localhost with virtualmachine ip.
 
 ## Task
 
@@ -35,4 +35,4 @@ Hint: You can see each ports current status from port event log.
 
 ## Cleanup
 
-After the lab is done remember to destroy the lab with command `./destroy.sh lab2`
+After the lab is done remember to destroy the lab with command `sudo ./destroy.sh lab2`
