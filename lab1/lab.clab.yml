@@ -8,7 +8,7 @@ topology:
     
     snmp:
       kind: linux
-      image: elcolio/net-snmp
+      image: tjarvenpaa/lab2:latest
       binds:
       - snmp.sh:/snmp.sh
       exec: 
