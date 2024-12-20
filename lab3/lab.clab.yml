@@ -1,0 +1,20 @@
+name: lab3
+topology:
+  nodes:
+    srl1:
+      kind: nokia_srlinux
+      type: ixrd3
+      image: ghcr.io/nokia/srlinux
+      startup-config: myconfig.json
+
+    
+    snmp:
+      kind: linux
+      image: tjarvenpaa/lab2:latest
+      binds:
+      - snmp.sh:/snmp.sh
+      exec: 
+      - /bin/bash /snmp.sh
+  
+  links:
+    - endpoints: ["snmp:eth1", "srl1:e1-5"]
