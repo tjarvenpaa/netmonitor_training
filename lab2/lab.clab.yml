@@ -2,33 +2,39 @@ name: lab2
 topology:
   nodes:
     srl1:
-      kind: srl
+      kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl1.cli
 
     srl2:
-      kind: srl
+      kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl2.cli
 
     srl3:
-      kind: srl
+      kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:22.11.2
       startup-config: srl3.cli
     
     observium:
       kind: linux
       image: uberchuckie/observium
-      wait-for:
-        - "srl1"
-        - "srl2"
-        - "srl3"
       ports:
       - 8102:8668
       binds:
       - observium.sh:/observium.sh
       exec:
       - /bin/bash /observium.sh
+      stages:
+        create:
+          wait-for:
+            - node: srl1
+              stage: configure
+            - node: srl2
+              stage: configure
+            - node: srl3
+              stage: configure
+        
   
   links:
     - endpoints: ["srl1:e1-1", "srl2:e1-2"]

@@ -10,6 +10,6 @@ docker run --rm -it --privileged --network host \
      --pid="host" \
      -v $(pwd):$(pwd) \
      -w $(pwd) \
-     ghcr.io/srl-labs/clab:0.38.0 clab deploy
+     ghcr.io/srl-labs/clab:0.69.3 clab deploy
 
 cd ..
